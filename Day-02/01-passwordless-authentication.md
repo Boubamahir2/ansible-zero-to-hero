@@ -7,6 +7,9 @@
 ```
 ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 ```
+```
+ cat ~/.ssh/id_rsa.pub | ssh root@server_ip "cat >> ~/.ssh/authorized_keys"
+```
 
 - ssh-copy-id: This is the command used to copy your public key to a remote machine.
 - -f: This flag forces the copying of keys, which can be useful if you have keys already set up and want to overwrite them.
