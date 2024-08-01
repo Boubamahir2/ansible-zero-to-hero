@@ -58,6 +58,9 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 ```
+ssh-add -l
+```
+```
  cat ~/.ssh/id_rsa.pub | ssh root@server_ip "cat >> ~/.ssh/authorized_keys"
 ```
 
