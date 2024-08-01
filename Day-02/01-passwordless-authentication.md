@@ -54,6 +54,10 @@ ansible all -m ping -u root
 ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 ```
 ```
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+```
+```
  cat ~/.ssh/id_rsa.pub | ssh root@server_ip "cat >> ~/.ssh/authorized_keys"
 ```
 
