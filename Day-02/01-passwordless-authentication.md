@@ -43,9 +43,19 @@ ansible_python_interpreter=/usr/bin/python3
 ansible-inventory --list -y
 ```
 
+### Example: Adding to PATH
+If the ansible command is located in /opt/ansible/bin, you can add it to your PATH by adding the following line to your shell configuration file:
+```
+export PATH="/opt/ansible/bin:$PATH"
+```
+
 ### Step 3 — Testing Connection
 ```
 ansible all -m ping -u root
+```
+or
+```
+ansible all -m ping -u root -vvv
 ```
 
 ### Using Public Key
