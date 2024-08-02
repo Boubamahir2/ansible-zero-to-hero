@@ -107,3 +107,12 @@ my_collection/
   community.general.my_module:
     option: value
 ```
+
+### Command Line Options
+Alternatively, you can specify the user and SSH key directly in the command line when running the playbook:
+```
+ansible-playbook -i /etc/ansible/hosts -u root --private-key=/path/to/your/private/key first-play.yaml -vvv
+```
+
+
+
