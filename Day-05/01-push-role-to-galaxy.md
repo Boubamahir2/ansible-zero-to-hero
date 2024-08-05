@@ -39,7 +39,8 @@ git push -u origin main
 ```
 
 4. Import the Role to Ansible Galaxy
+   go ansible-galaxy then click on collection, then load api token and copy your token
 
 ```
-ansible-galaxy role import <your_github_username> <role-name>
+ansible-galaxy role import <your_github_username> <role-name> --token <your token>
 ```
