@@ -19,8 +19,27 @@ Automate the shutdown of Ubuntu Instances only using Ansible Conditionals
 
 Hint: Use `when` condition on ansible `gather_facts`
 
+## Debug Ansible using facts
+```---
+- hosts: all
+  become: true
+  tasks:
+  - name: Print all available facts
+    ansible.builtin.debug:
+      var: ansible_facts 
+```
 
 
+To see the ‘raw’ information as gathered, run this command at the command line:
 
+``` ansible <hostname> -m ansible.builtin.setup ```
 
-
+## Debug Ansible using gatherfacts
+```---
+- hosts: all
+  become: true
+  tasks:
+  - name: Print all ansible gathhered ansible_facts
+    ansible.builtin.debug:
+      var: ansible_facts 
+```
