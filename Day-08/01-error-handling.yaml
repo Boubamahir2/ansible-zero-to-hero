@@ -23,42 +23,4 @@
         state: present
       when: output.failed
         
-# ---
-# - hosts: all
-#   become: true
-
-#   tasks:
-#    - name: Check if openssl is installed
-#       stat:
-#         path: /usr/bin/openssl
-#       register: openssl_check
-
-#     - name: Check if openssh is installed
-#       stat:
-#         path: /usr/bin/ssh
-#       register: openssh_check
-
-#     - name: Install openssl
-#       apt:
-#         name: openssl
-#         state: latest
-#       when: not openssl_check.stat.exists
-
-#     - name: Install openssh
-#       apt:
-#         name: openssh-server
-#         state: latest
-#       when: not openssh_check.stat.exists
-#       ignore_errors: yes 
-#     - name: Check if docker is installed
-#       ansible.builtin.command: docker --version
-#       register: output
-#       ignore_errors: yes    
-#     - ansible.builtin.debug:
-#         var: output
-#     - name: Install docker
-#       ansible.builtin.apt:
-#         name: docker.io
-#         state: present
-      # when: outputfailed
         
